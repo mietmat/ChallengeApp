@@ -8,15 +8,28 @@ namespace ChallengeApp
     {
         static void Main(string[] args)
         {
-            var employee = new Employee("Mateusz");
+            // var employee = new Employee("Mateusz");
 
-            employee.AddGrade(24.4);
+            // employee.AddGrade(5);
+            // employee.AddGrade(10);
+            // employee.AddGrade(30);
 
 
-            var grades = new[] { 12.4, 5, 0.333 };
+            // var stat = employee.GetStatistics();
 
-            employee.ShowStatistics();
+            // Console.WriteLine($"The low grade is: {stat.Low:N2}.");
+            // Console.WriteLine($"The high grade is: {stat.High:N2}");
+            // Console.WriteLine($"The average grade is: {stat.Average:N2}");
 
+            var driver1 = new Driver("Michał", "Kowalski");
+
+            driver1.AddKilometersTravelledPerDay(452.3);
+            driver1.AddKilometersTravelledPerDay(398.5);
+            driver1.AddKilometersTravelledPerDay(422.0);
+            driver1.AddKilometersTravelledPerDay(501);
+            driver1.AddKilometersTravelledPerDay(483.4);
+
+            driver1.GetStatistics();
 
 
         }

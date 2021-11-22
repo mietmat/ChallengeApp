@@ -18,20 +18,23 @@ namespace ChallengeApp
             this.grades.Add(grade);
         }
 
-        public void ShowStatistics()
+        public Statistics GetStatistics()
         {
-            var highGrade = double.MinValue;
-            var lowGrade = double.MaxValue;
+            var result = new Statistics();
+            result.Average = 0.0;
+            result.High = double.MinValue;
+            result.Low = double.MaxValue;
 
-            foreach (var number in grades)
+            foreach (var grade in grades)
             {
-
-                lowGrade = Math.Min(lowGrade, number);
-                highGrade = Math.Max(highGrade, number);
-
+                result.Low = Math.Min(grade, result.Low);
+                result.High = Math.Max(grade, result.High);
+                result.Average += grade;
             }
 
-            Console.WriteLine($"The low grade is: {lowGrade:N2}. The high grade is: {highGrade:N2}");
+            result.Average /= grades.Count;
+
+            return result;
 
         }
     }
