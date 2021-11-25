@@ -24,7 +24,7 @@ namespace ChallengeApp
 
             var stat = employee.GetStatistics();
 
-            Console.WriteLine($"The low grade is: {stat.Low:N2}.");
+            Console.WriteLine($"The  low grade is: {stat.Low:N2}.");
             Console.WriteLine($"The high grade is: {stat.High:N2}");
             Console.WriteLine($"The average grade is: {stat.Average:N2}");
 
