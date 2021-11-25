@@ -8,32 +8,32 @@ namespace ChallengeApp
     {
         static void Main(string[] args)
         {
-            var numbers = new[] { 12.4, 5, 0.333 };
+            // var employee = new Employee("Mateusz");
 
-            int i = 0;
-            double result = 0;
-            foreach (var number in numbers)
-            {
-                i++;
-                result += number;
-                Console.WriteLine($"Number {i} = " + number + " Actual result = " + result);
-
-            }
+            // employee.AddGrade(5);
+            // employee.AddGrade(10);
+            // employee.AddGrade(30);
 
 
-            var numbers2 = new List<double>() { 12.4, 5, 0.333 };
+            // var stat = employee.GetStatistics();
 
+            // Console.WriteLine($"The low grade is: {stat.Low:N2}.");
+            // Console.WriteLine($"The high grade is: {stat.High:N2}");
+            // Console.WriteLine($"The average grade is: {stat.Average:N2}");
 
-            if (args.Length > 0)
-            {
-                Console.WriteLine("Hello " + args[0]);
+            var driver1 = new Driver("Michał", "Kowalski");
 
-            }
-            else
-            {
-                Console.WriteLine("Nie podano argumentu do wyświetlenia !");
-            }
+            driver1.AddKilometersTravelledPerDay(452.3);
+            driver1.AddKilometersTravelledPerDay(398.5);
+            driver1.AddKilometersTravelledPerDay(422.0);
+            driver1.AddKilometersTravelledPerDay(501);
+            driver1.AddKilometersTravelledPerDay(483.4);
+
+            driver1.GetStatistics();
+
 
         }
     }
+
+
 }
