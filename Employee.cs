@@ -6,6 +6,8 @@ namespace ChallengeApp
     public class Employee
     {
         private string name;
+
+        public string Name { get; set; }
         private List<double> grades = new List<double>();
 
         public Employee(string name)
@@ -15,7 +17,25 @@ namespace ChallengeApp
 
         public void AddGrade(double grade)
         {
-            this.grades.Add(grade);
+            if (grade >= 0 && grade < 100)
+            {
+                this.grades.Add(grade);
+
+            }
+            else
+            {
+                Console.WriteLine("Invalid Value");
+            }
+        }
+
+        public void AddGrade(string grade)
+        {
+            int temporaryVariable = 0;
+            if (int.TryParse(grade, out temporaryVariable))
+            {
+                AddGrade(temporaryVariable);
+            }
+
         }
 
         public Statistics GetStatistics()
@@ -25,17 +45,41 @@ namespace ChallengeApp
             result.High = double.MinValue;
             result.Low = double.MaxValue;
 
-            foreach (var grade in grades)
+
+
+            for (var index = 0; index > grades.Count; index++)
             {
-                result.Low = Math.Min(grade, result.Low);
-                result.High = Math.Max(grade, result.High);
-                result.Average += grade;
+                if (grades[index] == 5)
+                {
+                    break;
+                }
+
+                if (grades[index] == 6)
+                {
+                    continue;
+                }
+
+                if (grades[index] == 7)
+                {
+                    goto here;
+                }
+
+
+                result.Low = Math.Min(grades[index], result.Low);
+                result.High = Math.Max(grades[index], result.High);
+                result.Average += grades[index];
+
             }
+
+        here:
+
 
             result.Average /= grades.Count;
 
             return result;
 
         }
+
+
     }
 }
