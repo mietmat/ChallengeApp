@@ -1,14 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace ChallengeApp
 {
-    struct Point
-    {
-
-    }
-
     class Program
     {
         static void Main(string[] args)
