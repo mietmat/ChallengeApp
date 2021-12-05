@@ -1,0 +1,40 @@
+Kierowca: Michał Kowalski
+Miesiąc: 12
+Data zapisu: 02.12.2021 18:26:11
+Przejechano: 200 km
+
+Kierowca: Michał KOWALSKI
+Miesiąc: 12
+Data zapisu: 02.12.2021 18:27:53
+Przejechano: 200 km
+
+Kierowca: Michał KOWALSKI
+Miesiąc: 12
+Data zapisu: 02.12.2021 18:35:07
+Przejechano: 200 km
+
+Kierowca: Michał KOWALSKI
+Miesiąc: 12
+Data zapisu: 02.12.2021 18:35:08
+Przejechano: 300 km
+
+Kierowca: Michał KOWALSKI
+Miesiąc: 12
+Data zapisu: 02.12.2021 18:35:09
+Przejechano: 600 km
+
+Kierowca: Michał KOWALSKI
+Miesiąc: 12
+Data zapisu: 02.12.2021 18:36:05
+Przejechano: 15063 km
+
+Kierowca: Michał KOWALSKI
+Miesiąc: 12
+Data zapisu: 02.12.2021 18:38:02
+Przejechano: 900 km
+
+Kierowca: Michał KOWALSKI
+Miesiąc: 12
+Data zapisu: 02.12.2021 18:42:57
+Przejechano: 500000 km
+

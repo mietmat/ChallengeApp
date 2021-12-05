@@ -1,0 +1,4 @@
+Statistics of the week - was recorded on: 02.12.2021 00:00:00
+Result high: 1500
+Result low: 1
+Result average: 356.47
