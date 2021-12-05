@@ -31,9 +31,6 @@ namespace ChallengeApp
             }
         }
 
-
-
-
         public NameSurnameObject(string name, string surname)
         {
             this.Name = name;
