@@ -117,34 +117,7 @@ namespace ChallengeApp
 
                 Console.WriteLine($"Enter daily kilometers travelled by {driver.name}");
                 var input = Console.ReadLine();
-                Console.WriteLine($"Hello! Welcome to the driver settlement application!");
-                Console.Write("Please enter name of the driver: ");
-                driver.name = Console.ReadLine().ToUpper();
-
-
-                Console.Write("Please enter the surname of the driver: ");
-                driver.surna = Console.ReadLine().ToUpper();
-
-                Console.Write("Please enter salary per travelled road: ");
-                var input = Console.ReadLine();
-
-                double salary;
-
-                try
-                {
-                    if (double.TryParse(input, out salary))
-                    {
-                        driver.salaryPerTravelledRoad = salary;
-                    }
-                    else
-                    {
-                        throw new Exception("Please use only the number !");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
+                
 
                 if (input == "q")
                 {

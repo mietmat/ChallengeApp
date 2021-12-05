@@ -5,8 +5,8 @@ namespace ChallengeApp
     public class NameSurnameObject
     {
         public string name;
-        public string surname;
-        public double salaryPerTravelledRoad;
+        protected string surname;
+        protected double salaryPerTravelledRoad;
 
         public string Name
         {
