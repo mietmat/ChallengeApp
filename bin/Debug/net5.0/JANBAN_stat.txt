@@ -1,6 +1,6 @@
-Statistics of the week: 48 - was recorded on: 05.12.2021 13:08:23
-Result high: 664 km/day
-Result low: -2 km/day
-Result average: 109.33 km/day
-In this week JAN travelled: 1312 km
-His salary is: 5 zł/km. Wynagrodzenie w tygodniu 48 wynosi: 6560 zł
+Statistics of the week: 48 - was recorded on: 05.12.2021 16:29:57
+Result high: 51 km/day
+Result low: -20 km/day
+Result average: 15.86 km/day
+In this week JAN travelled: 111 km
+His salary is: -20 zł/km. Wynagrodzenie w tygodniu 48 wynosi: -2220 zł

@@ -1,5 +1,0 @@
-Kierowca: QJAN ASDAS
-Miesiąc: 12
-Data zapisu: 05.12.2021 13:09:34
-Przejechano: 6 km
-

@@ -28,36 +28,83 @@ namespace ChallengeApp
         }
         public FileSaveDriver()
         {
-            Console.WriteLine($"Hello! Welcome to the driver settlement application!");
+                                  
+
+            Console.WriteLine($"Hello! Welcome to the driver settlement application! Follow the instructions but if you want to quit press Q");
             Console.Write("Please enter name of the driver: ");
             this.name = Console.ReadLine().ToUpper();
 
+            while (!CheckingStringData(name))
+            {
+                Console.Write("Driver name should have only a letters ! Please enter name of the driver: ");
+                this.name = Console.ReadLine().ToUpper();
+
+            }
+
+            if (name.ToLower() == "q")
+            {
+                    Environment.Exit(0);
+            }
 
             Console.Write("Please enter the surname of the driver: ");
             this.surname = Console.ReadLine().ToUpper();
-
-            
-            
-            Console.Write("Please enter salary per travelled road: ");
-            var input = Console.ReadLine();
-
-            double salary;
-            while (!(double.TryParse(input, out salary)))
+            while (!CheckingStringData(surname))
             {
-                Console.Write("Please use only the number ! Please enter salary per travelled road: ");
+                Console.Write("Driver surname should have only a letters ! Please enter name of the driver: ");
+                this.surname = Console.ReadLine().ToUpper();
 
-                input = Console.ReadLine();
+            }
+            if (surname.ToLower() == "q")
+            {
+                    Environment.Exit(0);
             }
 
-            this.salaryPerTravelledRoad = salary;
-                   
+            Console.Write("Please enter salary per travelled road: ");
+            var inputKey = Console.ReadLine();
+            if (inputKey.ToLower() == "q")
+            {
+                    Environment.Exit(0);
+            }
+
+
+            double salary;
+            foreach (var item in inputKey)
+            {                
+                while (!(double.TryParse(inputKey, out salary)))
+                {
+                    Console.Write("Please use only the number ! Please enter salary per travelled road: ");
+
+                    inputKey = Console.ReadLine();
+                }
+                
+            }
+            this.salaryPerTravelledRoad = double.Parse(inputKey);                                      
                     
+        }
+
+        public bool CheckingStringData(string data)
+        {
+            bool checking = true;
+            foreach(var number in data)
+            {
+                if (!(Char.IsDigit(number))&&Char.IsLetterOrDigit(number))
+                {
+                    return checking;
+                }
+                else
+                    return checking=false;
+            }
+
+            return checking;
+                       
         }
 
         public override void DrivingRoadDaily(double kilometersDaily)
         {
             var fileName = $"{Name}.txt";
             var fileStat = $"{Name + surname + "_stat"}.txt";
+            var fileAllEntries = $"{Name + surname + "_allentries"}.txt";
+
 
 
             if (File.Exists(fileStat))
@@ -71,7 +118,7 @@ namespace ChallengeApp
 
             }
 
-            using (var travelledRoadFile = File.AppendText($"{Name + " " + surname}.txt"))
+            using (var travelledRoadFile = File.AppendText($"{fileAllEntries}.txt"))
             {
                 travelledRoadFile.WriteLine($"Kierowca: {name + " " + surname}");
                 travelledRoadFile.WriteLine($"Miesiąc: {DateTime.Now.Month}");
