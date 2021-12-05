@@ -36,26 +36,22 @@ namespace ChallengeApp
             Console.Write("Please enter the surname of the driver: ");
             this.surname = Console.ReadLine().ToUpper();
 
+            
+            
             Console.Write("Please enter salary per travelled road: ");
             var input = Console.ReadLine();
 
             double salary;
+            while (!(double.TryParse(input, out salary)))
+            {
+                Console.Write("Please use only the number ! Please enter salary per travelled road: ");
 
-            try
-            {
-                if (double.TryParse(input, out salary))
-                {
-                    this.salaryPerTravelledRoad = salary;
-                }
-                else
-                {
-                    throw new Exception("Please use only the number !");
-                }
+                input = Console.ReadLine();
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+
+            this.salaryPerTravelledRoad = salary;
+                   
+                    
         }
 
         public override void DrivingRoadDaily(double kilometersDaily)

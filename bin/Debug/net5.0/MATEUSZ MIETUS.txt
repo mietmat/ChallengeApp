@@ -1,0 +1,30 @@
+Kierowca: MATEUSZ MIETUS
+Miesiąc: 12
+Data zapisu: 05.12.2021 13:11:04
+Przejechano: 6 km
+
+Kierowca: MATEUSZ MIETUS
+Miesiąc: 12
+Data zapisu: 05.12.2021 13:11:14
+Przejechano: 21 km
+
+Kierowca: MATEUSZ MIETUS
+Miesiąc: 12
+Data zapisu: 05.12.2021 13:12:41
+Przejechano: 10 km
+
+Kierowca: MATEUSZ MIETUS
+Miesiąc: 12
+Data zapisu: 05.12.2021 13:12:42
+Przejechano: 20 km
+
+Kierowca: MATEUSZ MIETUS
+Miesiąc: 12
+Data zapisu: 05.12.2021 13:12:50
+Przejechano: 30 km
+
+Kierowca: MATEUSZ MIETUS
+Miesiąc: 12
+Data zapisu: 05.12.2021 13:12:52
+Przejechano: 60 km
+
