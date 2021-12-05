@@ -148,6 +148,9 @@ namespace ChallengeApp
 
             driver.GetStatistics();
 
+            Console.WriteLine("The operation of this application has been closed. Have a nice day and see you later !\nPress any key to close the console view !");
+            Console.ReadKey();
+
 
             // driver.DrivingRoadDaily(452.3);
             // driver.DrivingRoadDaily(398.5);
