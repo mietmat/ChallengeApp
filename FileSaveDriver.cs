@@ -28,9 +28,19 @@ namespace ChallengeApp
         }
         public FileSaveDriver()
         {
-                                  
+            EnterDriverData();                                  
+        }
 
-            Console.WriteLine($"Hello! Welcome to the driver settlement application! Follow the instructions but if you want to quit press Q");
+        public void EnterDriverData()
+        {
+            EnterDriverName();
+            EnterDriverSurName();
+            EnterSalary();
+            
+        }
+
+        public void EnterDriverName()
+        {
             Console.Write("Please enter name of the driver: ");
             this.name = Console.ReadLine().ToUpper();
 
@@ -38,49 +48,53 @@ namespace ChallengeApp
             {
                 Console.Write("Driver name should have only a letters ! Please enter name of the driver: ");
                 this.name = Console.ReadLine().ToUpper();
-
             }
 
             if (name.ToLower() == "q")
             {
-                    Environment.Exit(0);
+                Environment.Exit(0);
             }
+        }
 
+        public void EnterDriverSurName()
+        {
             Console.Write("Please enter the surname of the driver: ");
             this.surname = Console.ReadLine().ToUpper();
             while (!CheckingStringData(surname))
             {
-                Console.Write("Driver surname should have only a letters ! Please enter name of the driver: ");
+                Console.Write("Driver surname should have only a letters ! Please enter surname of the driver: ");
                 this.surname = Console.ReadLine().ToUpper();
 
             }
             if (surname.ToLower() == "q")
             {
-                    Environment.Exit(0);
+                Environment.Exit(0);
             }
+        }
 
-            Console.Write("Please enter salary per travelled road: ");
+        public void EnterSalary()
+        {
+            Console.Write("Please enter salary per travelled road [zł/km]: ");
             var inputKey = Console.ReadLine();
             if (inputKey.ToLower() == "q")
             {
-                    Environment.Exit(0);
+                Environment.Exit(0);
             }
-
 
             double salary;
             foreach (var item in inputKey)
-            {                
+            {
                 while (!(double.TryParse(inputKey, out salary)))
                 {
-                    Console.Write("Please use only the number ! Please enter salary per travelled road: ");
+                    Console.Write("Please use only the number ! Please enter salary per travelled road [zł/km]: ");
 
                     inputKey = Console.ReadLine();
                 }
-                
+
             }
-            this.salaryPerTravelledRoad = double.Parse(inputKey);                                      
-                    
+            this.salaryPerTravelledRoad = double.Parse(inputKey);
         }
+
 
         public bool CheckingStringData(string data)
         {
@@ -104,7 +118,6 @@ namespace ChallengeApp
             var fileName = $"{Name}.txt";
             var fileStat = $"{Name + surname + "_stat"}.txt";
             var fileAllEntries = $"{Name + surname + "_allentries"}.txt";
-
 
 
             if (File.Exists(fileStat))
@@ -135,7 +148,6 @@ namespace ChallengeApp
 
         }
 
-
         public static int WeekOfYear(DateTime date)
         {
             var day = (int)CultureInfo.CurrentCulture.Calendar.GetDayOfWeek(date);
@@ -161,15 +173,12 @@ namespace ChallengeApp
 
                 using (var statFile = File.AppendText(fileName))
                 {     
-
                     statFile.WriteLine($"Statistics of the week: {WeekOfYear(DateTime.UtcNow)} - was recorded on: {DateTime.UtcNow}");
                     statFile.WriteLine("Result high: " + result.High + " km/day");
                     statFile.WriteLine("Result low: " + result.Low + " km/day");
-                    statFile.WriteLine("Result average: " + Math.Round(result.Average, 2) + " km/day");
-                                        
+                    statFile.WriteLine("Result average: " + Math.Round(result.Average, 2) + " km/day");                                       
                     statFile.WriteLine($"In this week {Name} travelled: " + result.Sum + " km");
                     statFile.WriteLine($"His salary is: {salaryPerTravelledRoad} zł/km. Wynagrodzenie w tygodniu {WeekOfYear(DateTime.UtcNow)} wynosi: " + salaryPerTravelledRoad*result.Sum + " zł");
-
                 }
 
             }

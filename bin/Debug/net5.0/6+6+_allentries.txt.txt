@@ -1,5 +1,0 @@
-Kierowca: 6+ 6+
-Miesiąc: 12
-Data zapisu: 05.12.2021 15:48:13
-Przejechano: 6 km
-

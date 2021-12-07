@@ -1,35 +1,20 @@
 Kierowca: JAN BAN
 Miesiąc: 12
-Data zapisu: 05.12.2021 16:18:57
-Przejechano: 15 km
+Data zapisu: 07.12.2021 17:47:42
+Przejechano: 200 km
 
 Kierowca: JAN BAN
 Miesiąc: 12
-Data zapisu: 05.12.2021 16:19:02
-Przejechano: 15 km
+Data zapisu: 07.12.2021 18:04:56
+Przejechano: 300 km
 
 Kierowca: JAN BAN
 Miesiąc: 12
-Data zapisu: 05.12.2021 16:23:31
-Przejechano: 51 km
+Data zapisu: 07.12.2021 18:05:02
+Przejechano: 300 km
 
 Kierowca: JAN BAN
 Miesiąc: 12
-Data zapisu: 05.12.2021 16:27:30
-Przejechano: 15 km
-
-Kierowca: JAN BAN
-Miesiąc: 12
-Data zapisu: 05.12.2021 16:27:33
-Przejechano: 15 km
-
-Kierowca: JAN BAN
-Miesiąc: 12
-Data zapisu: 05.12.2021 16:27:35
-Przejechano: -20 km
-
-Kierowca: JAN BAN
-Miesiąc: 12
-Data zapisu: 05.12.2021 16:29:56
-Przejechano: 20 km
+Data zapisu: 07.12.2021 18:33:35
+Przejechano: 200 km
 

@@ -108,6 +108,8 @@ namespace ChallengeApp
 
 
             // var driver = new FileSaveDriver("Michał", "Kowalski");
+            Console.WriteLine($"Hello! Welcome to the driver settlement application! Follow the instructions but if you want to quit press Q");
+
             var driver = new FileSaveDriver();
 
             // driver.TravelledRoad += ToSmallTravelledRoad;
@@ -115,7 +117,7 @@ namespace ChallengeApp
             while (true)
             {
 
-                Console.WriteLine($"Enter daily kilometers travelled by {driver.name}");
+                Console.Write($"Today is: {DateTime.UtcNow}. Please enter daily kilometers travelled by {driver.name}: ");
                 var input = Console.ReadLine();
                 
 
