@@ -108,7 +108,7 @@ namespace ChallengeApp
 
 
             // var driver = new FileSaveDriver("Michał", "Kowalski");
-            Console.WriteLine($"Hello! Welcome to the driver settlement application! Follow the instructions but if you want to quit press Q");
+            Console.WriteLine($"Welcome to the driver settlement application! Follow the instructions but if you want to quit press Q");
 
             var driver = new FileSaveDriver();
 
